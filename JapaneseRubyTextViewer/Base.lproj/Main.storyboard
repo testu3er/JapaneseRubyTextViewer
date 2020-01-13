@@ -50,7 +50,7 @@
                                     <constraint firstItem="BTb-B7-IeU" firstAttribute="centerX" secondItem="4yT-40-RlT" secondAttribute="centerX" id="po0-IH-ZVr"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zs0-Xt-q5K">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zs0-Xt-q5K">
                                 <rect key="frame" x="0.0" y="117.33333333333331" width="375" height="514"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
