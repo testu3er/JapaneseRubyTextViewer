@@ -28,6 +28,7 @@ class URLRequestController {
         request.httpBody = post.data(using: String.Encoding.utf8);
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
+            // サーバーからのレスポンスエラー
             if let error = error {
                 let errorDict = ["code": "", "message": error.localizedDescription];
                 self.errorCallBack(errorDict)
@@ -38,6 +39,7 @@ class URLRequestController {
                 print("Response data string:\n \(responseData)")
                 let dic = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: Any]
                 
+                // サーバーからのレスポンスエラー
                 if dic["error"] != nil {
                     let error:Dictionary = dic["error"] as! Dictionary<String, Any>
                     let message:String = error["message"] as! String
@@ -46,7 +48,8 @@ class URLRequestController {
                     self.errorCallBack(errorDict)
                     return
                 }
-                
+
+                // サーバーからのレスポンス成功
                 print("converted: \(dic["converted"] as! String)")
                 print("output_type: \(dic["output_type"] as! String)")
                 print("request_id: \(dic["request_id"] as! String)")

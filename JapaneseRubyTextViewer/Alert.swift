@@ -1,11 +1,3 @@
-//
-//  Alert.swift
-//  RubyTextViewerProto
-//
-//  Created by mini2019 on 2020/01/12.
-//  Copyright © 2020 mini2019. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -17,6 +9,7 @@ class Alert {
         self.okCallBack = okCallBack
     }
     
+    // アラートを表示します
     func showAlert(_ alertTitle: String, alertMessage: String, viewController: UIViewController)
     {
         DispatchQueue.main.async {
@@ -24,6 +17,7 @@ class Alert {
             let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
                 (action: UIAlertAction!) -> Void in
                 do {
+                    // initで指定した場所にコールバックします
                     self.okCallBack()
                 }
             })

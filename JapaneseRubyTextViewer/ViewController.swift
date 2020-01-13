@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  RubyTextViewerProto
-//
-//  Created by mini2019 on 2020/01/11.
-//  Copyright © 2020 mini2019. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -52,6 +44,7 @@ class ViewController: UIViewController {
         // 特に処理をしない
     }
 
+    // テキストの入力が空の場合は、変換ボタンを押せないようにする
     func checkExecButtonPermissionForTextLength(textLength: Int)
     {
         execButton.isEnabled = (textLength > 0) ? true : false
@@ -63,12 +56,14 @@ class ViewController: UIViewController {
         checkExecButtonPermissionForTextLength(textLength: resultText.utf8.count)
     }
     
+    // 変換するボタンを押した時の処理
     @IBAction func buttonTapped(_ sender : Any)
     {
         let _post = "app_id="+AppID+"&sentence="+inputTextField.text!+"&output_type="+OutputType;
         urlRequestController.postRequest(HiraganaServiceUrl, post: _post)
     }
     
+    // ひらがな変換を行った後のサーバーからのレスポンスが正常だった場合
     func urlRequestCompleteCallBack(response:Dictionary<String, Any>)
     {
         // 結果画面へ遷移
@@ -82,12 +77,14 @@ class ViewController: UIViewController {
         }
     }
     
+    // ひらがな変換を行った後のサーバーからのレスポンスがエラーだった場合
     func urlRequestErrorCallBack(response:Dictionary<String, Any>)
     {
         let errorCode: String = response["code"] as! String
         alert.showAlert("エラーコード:" + errorCode, alertMessage: response["message"] as! String, viewController: self)
     }
     
+    // テキスト以外の場所をタップしたら、仮想キーボードを消す
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

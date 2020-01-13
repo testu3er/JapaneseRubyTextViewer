@@ -1,11 +1,3 @@
-//
-//  HiraganaData.swift
-//  RubyTextViewerProto
-//
-//  Created by mini2019 on 2020/01/12.
-//  Copyright © 2020 mini2019. All rights reserved.
-//
-
 import Foundation
 
 class HiraganaData {

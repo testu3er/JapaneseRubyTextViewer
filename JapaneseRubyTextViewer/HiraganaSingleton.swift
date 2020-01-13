@@ -1,11 +1,3 @@
-//
-//  HiraganaSingleton.swift
-//  RubyTextViewerProto
-//
-//  Created by mini2019 on 2020/01/12.
-//  Copyright © 2020 mini2019. All rights reserved.
-//
-
 import Foundation
 
 class HiraganaSingleton: NSObject {
@@ -14,6 +6,7 @@ class HiraganaSingleton: NSObject {
     static let sharedInstance: HiraganaSingleton = HiraganaSingleton()
     private override init() {}
     
+    // ひらがな変換前の文字列
     var original:String {
         get {
             return data.original
@@ -23,6 +16,7 @@ class HiraganaSingleton: NSObject {
         }
     }
     
+    // ひらがな変換後の文字列
     var result:String {
         get {
             return data.result

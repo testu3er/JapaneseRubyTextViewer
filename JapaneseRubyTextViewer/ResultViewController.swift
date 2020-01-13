@@ -15,7 +15,6 @@ class ResultViewController: UIViewController {
         resultTextView.layer.borderColor = UIColor.black.cgColor
         // 枠の幅
         resultTextView.layer.borderWidth = 1.0
-        
         resultTextView.text = hiraganaSingleton.result
     }
     
