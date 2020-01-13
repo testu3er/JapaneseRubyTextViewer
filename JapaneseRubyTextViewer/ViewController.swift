@@ -17,10 +17,16 @@ class ViewController: UIViewController {
     {
         super.viewDidLoad()
     }
-    
+
+    func checkExecButtonPermissionForTextLength(textLength: Int)
+    {
+        execButton.isEnabled = (textLength > 0) ? true : false
+    }
+
     @IBAction func inputTextEditingChanged(_ textField: UITextField)
     {
-        // TODO テキストが空の場合は、ひらがな変換ボタンを押せないようにする
+        let resultText: String = textField.text!
+        checkExecButtonPermissionForTextLength(textLength: resultText.utf8.count)
     }
     
     @IBAction func buttonTapped(_ sender : Any)
