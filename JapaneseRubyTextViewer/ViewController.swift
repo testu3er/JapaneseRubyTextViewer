@@ -13,9 +13,15 @@ class ViewController: UIViewController {
     @IBOutlet var execButton :UIButton!
     @IBOutlet weak var inputTextField: UITextField!
     
+    let hiraganaSingleton :HiraganaSingleton = HiraganaSingleton.sharedInstance
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        inputTextField.text = hiraganaSingleton.original
+        checkExecButtonPermissionForTextLength(textLength: hiraganaSingleton.original.utf8.count)
+
     }
 
     func checkExecButtonPermissionForTextLength(textLength: Int)
