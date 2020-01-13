@@ -55,6 +55,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputTextEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="x43-mz-PpW"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KbN-sQ-1RV" userLabel="ConfirmView">
                                 <rect key="frame" x="0.0" y="631.33333333333337" width="375" height="180.66666666666663"/>
@@ -65,6 +68,9 @@
                                         <state key="normal" title="変換する">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Is9-gj-wVe"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -99,6 +105,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="execButton" destination="JEK-vr-UFq" id="d18-ms-fEQ"/>
+                        <outlet property="inputTextField" destination="zs0-Xt-q5K" id="J4y-8Q-7h1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
