@@ -14,6 +14,8 @@
 		FEFEE91B23CC54CA006FE82B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEFEE91923CC54CA006FE82B /* LaunchScreen.storyboard */; };
 		FEFEE92623CC54CA006FE82B /* JapaneseRubyTextViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFEE92523CC54CA006FE82B /* JapaneseRubyTextViewerTests.swift */; };
 		FEFEE93123CC54CA006FE82B /* JapaneseRubyTextViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFEE93023CC54CA006FE82B /* JapaneseRubyTextViewerUITests.swift */; };
+		FEFEE93F23CC5F6E006FE82B /* HiraganaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFEE93E23CC5F6E006FE82B /* HiraganaData.swift */; };
+		FEFEE94123CC5F8E006FE82B /* HiraganaSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFEE94023CC5F8E006FE82B /* HiraganaSingleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		FEFEE92C23CC54CA006FE82B /* JapaneseRubyTextViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JapaneseRubyTextViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEFEE93023CC54CA006FE82B /* JapaneseRubyTextViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseRubyTextViewerUITests.swift; sourceTree = "<group>"; };
 		FEFEE93223CC54CA006FE82B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEFEE93E23CC5F6E006FE82B /* HiraganaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaData.swift; sourceTree = "<group>"; };
+		FEFEE94023CC5F8E006FE82B /* HiraganaSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaSingleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				FEFEE91723CC54CA006FE82B /* Assets.xcassets */,
 				FEFEE91923CC54CA006FE82B /* LaunchScreen.storyboard */,
 				FEFEE91C23CC54CA006FE82B /* Info.plist */,
+				FEFEE93E23CC5F6E006FE82B /* HiraganaData.swift */,
+				FEFEE94023CC5F8E006FE82B /* HiraganaSingleton.swift */,
 			);
 			path = JapaneseRubyTextViewer;
 			sourceTree = "<group>";
@@ -256,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEFEE94123CC5F8E006FE82B /* HiraganaSingleton.swift in Sources */,
 				FEFEE91323CC54C9006FE82B /* ViewController.swift in Sources */,
 				FEFEE91123CC54C9006FE82B /* AppDelegate.swift in Sources */,
+				FEFEE93F23CC5F6E006FE82B /* HiraganaData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
