@@ -17,6 +17,11 @@ class ViewController: UIViewController {
     
     var alert:Alert!
     
+    let AppID: String = "180885c7f439f2826984a75c4fb9bf22972e7955cf3f9b98add65b63530cc791"
+    let HiraganaServiceUrl: String = "https://labs.goo.ne.jp/api/hiragana"
+    let OutputType: String = "hiragana"
+    var urlRequestController:URLRequestController!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -30,6 +35,16 @@ class ViewController: UIViewController {
             }
         )
 
+        urlRequestController = URLRequestController (
+            completeCallBack: {
+                (resonse:Dictionary<String, Any>)->Void in
+                self.urlRequestCompleteCallBack(response: resonse)
+            },
+            errorCallBack: {
+                (resonse:Dictionary<String, Any>)->Void in
+                self.urlRequestErrorCallBack(response: resonse)
+            }
+        )
     }
     
     func okCallBack()
@@ -50,7 +65,19 @@ class ViewController: UIViewController {
     
     @IBAction func buttonTapped(_ sender : Any)
     {
-        // TODO ひらがな変換処理を行う
+        let _post = "app_id="+AppID+"&sentence="+inputTextField.text!+"&output_type="+OutputType;
+        urlRequestController.postRequest(HiraganaServiceUrl, post: _post)
+    }
+    
+    func urlRequestCompleteCallBack(response:Dictionary<String, Any>)
+    {
+        // TODO 結果画面へ遷移
+    }
+    
+    func urlRequestErrorCallBack(response:Dictionary<String, Any>)
+    {
+        let errorCode: String = response["code"] as! String
+        alert.showAlert("エラーコード:" + errorCode, alertMessage: response["message"] as! String, viewController: self)
     }
     
 }
