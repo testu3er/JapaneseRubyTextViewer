@@ -16,6 +16,7 @@
 		FEFEE93123CC54CA006FE82B /* JapaneseRubyTextViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFEE93023CC54CA006FE82B /* JapaneseRubyTextViewerUITests.swift */; };
 		FEFEE93F23CC5F6E006FE82B /* HiraganaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFEE93E23CC5F6E006FE82B /* HiraganaData.swift */; };
 		FEFEE94123CC5F8E006FE82B /* HiraganaSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFEE94023CC5F8E006FE82B /* HiraganaSingleton.swift */; };
+		FEFEE94323CC600B006FE82B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFEE94223CC600B006FE82B /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		FEFEE93223CC54CA006FE82B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEFEE93E23CC5F6E006FE82B /* HiraganaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaData.swift; sourceTree = "<group>"; };
 		FEFEE94023CC5F8E006FE82B /* HiraganaSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaSingleton.swift; sourceTree = "<group>"; };
+		FEFEE94223CC600B006FE82B /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				FEFEE91C23CC54CA006FE82B /* Info.plist */,
 				FEFEE93E23CC5F6E006FE82B /* HiraganaData.swift */,
 				FEFEE94023CC5F8E006FE82B /* HiraganaSingleton.swift */,
+				FEFEE94223CC600B006FE82B /* Alert.swift */,
 			);
 			path = JapaneseRubyTextViewer;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				FEFEE94123CC5F8E006FE82B /* HiraganaSingleton.swift in Sources */,
 				FEFEE91323CC54C9006FE82B /* ViewController.swift in Sources */,
 				FEFEE91123CC54C9006FE82B /* AppDelegate.swift in Sources */,
+				FEFEE94323CC600B006FE82B /* Alert.swift in Sources */,
 				FEFEE93F23CC5F6E006FE82B /* HiraganaData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
