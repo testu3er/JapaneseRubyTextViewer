@@ -71,7 +71,15 @@ class ViewController: UIViewController {
     
     func urlRequestCompleteCallBack(response:Dictionary<String, Any>)
     {
-        // TODO 結果画面へ遷移
+        // 結果画面へ遷移
+        let storyboard: UIStoryboard = self.storyboard!
+        let resultView = storyboard.instantiateViewController(withIdentifier: "ResultView") as! ResultViewController
+        resultView.hiraganaSingleton.result = response["converted"] as! String
+        resultView.hiraganaSingleton.original = self.inputTextField.text!
+        resultView.modalTransitionStyle = .flipHorizontal
+        DispatchQueue.main.async {
+            self.present(resultView, animated: true, completion: nil)
+        }
     }
     
     func urlRequestErrorCallBack(response:Dictionary<String, Any>)

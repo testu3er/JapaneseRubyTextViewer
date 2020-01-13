@@ -21,7 +21,14 @@ class ResultViewController: UIViewController {
     
     @IBAction func retButtonTapped(_ sender : Any)
     {
-        // TODO ひらがな変換画面へ遷移
+        // ひらがな変換画面へ遷移
+        let storyboard: UIStoryboard = self.storyboard!
+        let inputView = storyboard.instantiateViewController(withIdentifier: "InputView") as! ViewController
+        inputView.hiraganaSingleton.original = hiraganaSingleton.original
+        inputView.modalTransitionStyle = .flipHorizontal
+        DispatchQueue.main.async {
+            self.present(inputView, animated: true, completion: nil)
+        }
     }
     
     @IBAction func pasteBoardButtonTapped(_ sender : Any)
