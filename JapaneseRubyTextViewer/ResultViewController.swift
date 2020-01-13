@@ -35,4 +35,7 @@ class ResultViewController: UIViewController {
         UIPasteboard.general.string = resultTextView.text
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
