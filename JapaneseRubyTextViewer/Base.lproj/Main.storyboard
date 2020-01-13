@@ -112,11 +112,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="378" y="23"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="AWz-Ee-8qw">
             <objects>
-                <viewController storyboardIdentifier="ResultView" id="4QK-qn-hWM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultView" id="4QK-qn-hWM" customClass="ResultViewController" customModule="JapaneseRubyTextViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ubo-uU-sjf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -163,6 +164,9 @@
                                         <state key="normal" title="戻る">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="retButtonTapped:" destination="4QK-qn-hWM" eventType="touchUpInside" id="uNj-eS-ZYb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -193,6 +197,9 @@
                                         <state key="normal" title="クリップボードにコピー">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="pasteBoardButtonTapped:" destination="4QK-qn-hWM" eventType="touchUpInside" id="Bbl-Dx-CE7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -235,6 +242,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jO5-G6-M8A"/>
                     </view>
+                    <connections>
+                        <outlet property="clipCopyButton" destination="tRr-CO-W1k" id="RcG-8G-miy"/>
+                        <outlet property="resultTextView" destination="oG1-or-all" id="m2i-aR-njD"/>
+                        <outlet property="retButton" destination="5eS-wk-76y" id="GZu-jC-mUL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJM-Wh-C7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
