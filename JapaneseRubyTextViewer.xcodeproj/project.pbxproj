@@ -18,6 +18,7 @@
 		FEFEE94123CC5F8E006FE82B /* HiraganaSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFEE94023CC5F8E006FE82B /* HiraganaSingleton.swift */; };
 		FEFEE94323CC600B006FE82B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFEE94223CC600B006FE82B /* Alert.swift */; };
 		FEFEE94523CC6080006FE82B /* URLRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFEE94423CC6080006FE82B /* URLRequestController.swift */; };
+		FEFEE94723CC7194006FE82B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFEE94623CC7194006FE82B /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		FEFEE94023CC5F8E006FE82B /* HiraganaSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaSingleton.swift; sourceTree = "<group>"; };
 		FEFEE94223CC600B006FE82B /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		FEFEE94423CC6080006FE82B /* URLRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestController.swift; sourceTree = "<group>"; };
+		FEFEE94623CC7194006FE82B /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				FEFEE94023CC5F8E006FE82B /* HiraganaSingleton.swift */,
 				FEFEE94223CC600B006FE82B /* Alert.swift */,
 				FEFEE94423CC6080006FE82B /* URLRequestController.swift */,
+				FEFEE94623CC7194006FE82B /* ResultViewController.swift */,
 			);
 			path = JapaneseRubyTextViewer;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			files = (
 				FEFEE94123CC5F8E006FE82B /* HiraganaSingleton.swift in Sources */,
 				FEFEE91323CC54C9006FE82B /* ViewController.swift in Sources */,
+				FEFEE94723CC7194006FE82B /* ResultViewController.swift in Sources */,
 				FEFEE91123CC54C9006FE82B /* AppDelegate.swift in Sources */,
 				FEFEE94523CC6080006FE82B /* URLRequestController.swift in Sources */,
 				FEFEE94323CC600B006FE82B /* Alert.swift in Sources */,
